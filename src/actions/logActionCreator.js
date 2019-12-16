@@ -8,12 +8,8 @@ import {
   CLEAR_LOGS,
   SET_LOADING,
   LOGS_ERROR,
-  SEARCH_LOGS,
-  GET_TECHS,
-  ADD_TECH,
-  DELETE_TECH,
-  TECHS_ERROR
-} from '../actions/types';
+  SEARCH_LOGS
+} from './types';
 
 // Get Logs from Server
 export const getLogs = () => async dispatch => {
@@ -27,7 +23,7 @@ export const getLogs = () => async dispatch => {
     });
   } catch (error) {
     console.log(error.response.data);
-    dispatch({ type: LOGS_ERROR, payload: error.response.data });
+    dispatch({ type: LOGS_ERROR, payload: error.response.statusText });
   }
 };
 
@@ -49,7 +45,7 @@ export const addLog = log => async dispatch => {
     });
   } catch (error) {
     console.log(error.response.data);
-    dispatch({ type: LOGS_ERROR, payload: error.response.data });
+    dispatch({ type: LOGS_ERROR, payload: error.response.statusText });
   }
 };
 
@@ -71,7 +67,7 @@ export const updateLog = log => async dispatch => {
     });
   } catch (error) {
     console.log(error.response.data);
-    dispatch({ type: LOGS_ERROR, payload: error.response.data });
+    dispatch({ type: LOGS_ERROR, payload: error.response.statusText });
   }
 };
 
@@ -87,7 +83,7 @@ export const searchLogs = text => async dispatch => {
     });
   } catch (error) {
     console.log(error.response.data);
-    dispatch({ type: LOGS_ERROR, payload: error.response.data });
+    dispatch({ type: LOGS_ERROR, payload: error.response.statusText });
   }
 };
 
@@ -104,7 +100,7 @@ export const deleteLog = id => async dispatch => {
     });
   } catch (error) {
     console.log(error.response.data);
-    dispatch({ type: LOGS_ERROR, payload: error.response.data });
+    dispatch({ type: LOGS_ERROR, payload: error.response.statusText });
   }
 };
 
@@ -119,7 +115,7 @@ export const setCurrent = log => {
 // Clear current log
 export const clearCurrent = () => {
   return {
-    type: SET_CURRENT
+    type: CLEAR_CURRENT
   };
 };
 

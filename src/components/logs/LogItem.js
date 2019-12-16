@@ -1,7 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
-import { deleteLog, setCurrent } from '../../actions/actionCreator';
+import { deleteLog, setCurrent } from '../../actions/logActionCreator';
 import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize';
 

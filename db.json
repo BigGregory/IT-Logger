@@ -2,10 +2,10 @@
   "logs": [
     {
       "id": 2,
-      "message": "Repair PC 5677",
+      "message": "Repair PC 56775656",
       "attention": true,
-      "tech": "John Doe",
-      "date": "2019-12-16T12:13:47.816Z"
+      "tech": "Booba  Man",
+      "date": "2019-12-16T15:02:54.628Z"
     },
     {
       "message": "Mac OS reinstall 554",
@@ -27,28 +27,25 @@
       "tech": "Sam Smith",
       "date": "2019-12-16T13:11:30.512Z",
       "id": 5
+    },
+    {
+      "message": "Breakin Bad s06",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2019-12-16T14:40:52.331Z",
+      "id": 6
     }
   ],
   "techs": [
-    {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe"
-    },
     {
       "id": 2,
       "firstName": "Sam",
       "lastName": "Smith"
     },
     {
-      "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
-    },
-    {
-      "firstName": "Greg",
-      "lastName": "Hardy",
-      "id": 4
+      "firstName": "Batman",
+      "lastName": "Joker",
+      "id": 5
     }
   ]
 }

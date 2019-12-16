@@ -8,11 +8,7 @@ import {
   CLEAR_LOGS,
   SET_LOADING,
   LOGS_ERROR,
-  SEARCH_LOGS,
-  GET_TECHS,
-  ADD_TECH,
-  DELETE_TECH,
-  TECHS_ERROR
+  SEARCH_LOGS
 } from '../actions/types';
 
 const initialState = {

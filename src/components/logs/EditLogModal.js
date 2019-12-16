@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { updateLog } from '../../actions/actionCreator';
+import { updateLog } from '../../actions/logActionCreator';
 import M from 'materialize-css/dist/js/materialize';
 
-const EditLogModal = ({ current, updateLog }) => {
+const EditLogModal = ({ current, updateLog, techs }) => {
   const [message, setMessage] = useState('');
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
@@ -65,9 +65,11 @@ const EditLogModal = ({ current, updateLog }) => {
               <option value="" disabled>
                 Select Technician
               </option>
-              <option value="John Doe">John Doe</option>
-              <option value="Sam Smith">Sam Smith</option>
-              <option value="Sara Wilson">Sara Wilson</option>
+              {techs.map(tech => (
+                <option
+                  value={`${tech.firstName} ${tech.lastName}`}
+                  key={tech.id}>{`${tech.firstName} ${tech.lastName}`}</option>
+              ))}
             </select>
           </div>
         </div>
@@ -104,12 +106,14 @@ const modalStyle = {
 
 EditLogModal.propTypes = {
   current: PropTypes.object,
-  updateLog: PropTypes.func.isRequired
+  updateLog: PropTypes.func.isRequired,
+  techs: PropTypes.array
 };
 
 const mapStateToProps = state => {
   return {
-    current: state.log.current
+    current: state.log.current,
+    techs: state.tech.techs
   };
 };
 

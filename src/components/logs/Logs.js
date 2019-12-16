@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import LogItem from './LogItem';
 import Preloader from '../layout/Preloader';
-import { getLogs } from '../../actions/actionCreator';
+import { getLogs } from '../../actions/logActionCreator';
 import PropTypes from 'prop-types';
 
 const Logs = ({ log: { logs, loading }, getLogs }) => {
