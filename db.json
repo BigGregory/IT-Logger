@@ -1,25 +1,32 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Changed hard drive on workstation 005",
-      "attention": false,
-      "date": "03-02-2019",
-      "tech": "Sam Smith"
-    },
-    {
       "id": 2,
-      "message": "Workstation 007 not posting",
+      "message": "Repair PC 5677",
       "attention": true,
-      "date": "03-02-2019",
-      "tech": "John Doe"
+      "tech": "John Doe",
+      "date": "2019-12-16T12:13:47.816Z"
     },
     {
-      "id": 3,
-      "message": "Changed memory on workstation 050",
+      "message": "Mac OS reinstall 554",
       "attention": false,
-      "date": "03-02-2019",
-      "tech": "Sara Wilson"
+      "tech": "John Doe",
+      "date": "2019-12-16T13:09:52.635Z",
+      "id": 3
+    },
+    {
+      "message": "LLoff",
+      "attention": false,
+      "tech": "Sara Wilson",
+      "date": "2019-12-16T13:10:06.466Z",
+      "id": 4
+    },
+    {
+      "message": "Fix that fucking bugs!!!",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2019-12-16T13:11:30.512Z",
+      "id": 5
     }
   ],
   "techs": [

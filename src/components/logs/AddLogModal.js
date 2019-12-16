@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { addLog } from '../../actions/actionCreator';
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize';
 
-const AddLogModal = () => {
+const AddLogModal = ({ addLog }) => {
   const [message, setMessage] = useState('');
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
@@ -11,6 +14,14 @@ const AddLogModal = () => {
     if (!message || !tech) {
       M.toast({ html: 'Please enter a message and tech' });
     } else {
+      const newLog = {
+        message,
+        attention,
+        tech,
+        date: new Date()
+      };
+      addLog(newLog);
+      M.toast({ html: `Log added by ${tech}` });
       clearFields();
     }
   };
@@ -80,9 +91,13 @@ const AddLogModal = () => {
   );
 };
 
+AddLogModal.propTypes = {
+  addLog: PropTypes.func.isRequired
+};
+
 const modalStyle = {
   width: '75%',
   height: '75%'
 };
 
-export default AddLogModal;
+export default connect(null, { addLog })(AddLogModal);
